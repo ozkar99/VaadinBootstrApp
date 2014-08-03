@@ -21,7 +21,6 @@ import com.vaadin.ui.Notification;
 import com.vaadin.ui.PasswordField;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
-import com.vaadin.ui.themes.Reindeer;
 
 
 
@@ -50,8 +49,7 @@ public class LoginPage extends CustomComponent implements View  {
         root.addComponent(loginForm);
         root.setComponentAlignment(loginForm, Alignment.MIDDLE_CENTER);
         root.setSizeFull();     
-        root.setStyleName(Reindeer.LAYOUT_BLUE);                        
-        
+
         loginForm.addComponent(txtUsername);
         loginForm.addComponent(txtPassword);
         loginForm.addComponent(btnOk);

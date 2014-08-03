@@ -6,28 +6,28 @@
 
 package org.ozkar.vaadinBootstrapp.common;
 
-import org.ozkar.vaadinBootstrapp.application.utils.SpringContextHelper;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.VerticalLayout;
+import org.ozkar.vaadinBootstrapp.application.utils.SpringContextHelper;
 
 /**
  *
- * @author admin
+ * @author ozkar
  */
 public abstract class MasterPage extends CustomComponent implements View  {
-         
-    VerticalLayout view = new VerticalLayout();
-    Menu menu;
+
+    private Menu menu;
+    private VerticalLayout view = new VerticalLayout();
 
     public MasterPage() {
         
         VerticalLayout root = new VerticalLayout();
        
-        SpringContextHelper helper = new SpringContextHelper(VaadinServlet.getCurrent().getServletContext());
-        menu = (Menu) helper.getBean("menu");
+       SpringContextHelper helper = new SpringContextHelper(VaadinServlet.getCurrent().getServletContext());
+       menu = (Menu) helper.getBean("menu");
                
         root.addComponent(menu);
         root.addComponent(view);      
@@ -41,11 +41,9 @@ public abstract class MasterPage extends CustomComponent implements View  {
     }       
     
     @Override
-    public void enter(ViewChangeListener.ViewChangeEvent event) {        
-        //Notification.show("MALDITOS LUCHADORES CALLEJEROS");
+    public void enter(ViewChangeListener.ViewChangeEvent event) {
     }
 
-    
     public VerticalLayout getView() {
         return view;
     }

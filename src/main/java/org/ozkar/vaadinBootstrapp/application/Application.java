@@ -35,8 +35,8 @@ public class Application extends UI
         nav.addView(EgresadosPage.URL, EgresadosPage.class);
       
         /*Start Page*/
-        nav.navigateTo(LoginPage.URL);                   
+        nav.navigateTo(LoginPage.URL);
     }
-    
+
     
 }
