@@ -9,12 +9,8 @@
             30
         </session-timeout>
     </session-config>
-    
-    <context-param>
-        <param-name>log4j-config-location</param-name>
-        <param-value>WEB-INF/log4j.properties</param-value>
-    </context-param>
-    
+
+    <!-- spring -->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
@@ -23,5 +19,7 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>/WEB-INF/applicationContext.xml</param-value>
     </context-param>
+
+    <!-- hibernate -->
     
 </web-app>
